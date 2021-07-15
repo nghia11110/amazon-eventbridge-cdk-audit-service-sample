@@ -27,7 +27,7 @@ export class PipelineStack extends Stack {
         owner: ssm.StringParameter.fromStringParameterName(this, 'GithubUsername', 'github_username').stringValue,
         repo: 'amazon-eventbridge-cdk-audit-service-sample',
         oauthToken: SecretValue.secretsManager('github_token', { jsonField: 'github_token' }),
-        branch: 'main'
+        branch: 'master'
       }),
 
       // build
