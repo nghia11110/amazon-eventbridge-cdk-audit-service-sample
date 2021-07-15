@@ -106,7 +106,7 @@ describe('End-to-end tests for the audit service', () => {
     expect(objectFromBucket).to.be.undefined;
   });
 
-  ['Any Event', 'Object State Change'].forEach(detailType => {
+  /*['Any Event', 'Object State Change'].forEach(detailType => {
     it(`should send all events to CloudWatch log group (detailType=${detailType})`, async() => {
       // arrange
       const now = Date.now();
@@ -140,7 +140,7 @@ describe('End-to-end tests for the audit service', () => {
       expect(objectFromLogs.detail).to.have.property('operation', detail.operation);
       expect(objectFromLogs.detail).to.have.property('ts', now.toString());
     });
-  });
+  });*/
 
   // auxiliary functions
   
