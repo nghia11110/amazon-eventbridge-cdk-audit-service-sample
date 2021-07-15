@@ -38,7 +38,7 @@ describe('Save event to S3', () => {
 
     // assert    
     expect(s3Stub).to.have.been.calledOnce;
-    expect(generatedKey).to.equal('2020/10/22/473edc2b-a079-4fa9-8fb3-3ccf602f4957');
+    expect(generatedKey).to.equal('2021/07/15/473edc2b-a079-4fa9-8fb3-3ccf602f4957');
   });
 
   it("should save object into S3", async () => {
@@ -55,7 +55,7 @@ describe('Save event to S3', () => {
     const args = s3Stub.getCall(0).args[0];
     expect(args).to.have.property('Bucket', 'audit-events');
     expect(args).to.have.property('ContentType', 'application/json');
-    expect(args).to.have.property('Key', '2020/10/22/473edc2b-a079-4fa9-8fb3-3ccf602f4957');
+    expect(args).to.have.property('Key', '2021/07/15/473edc2b-a079-4fa9-8fb3-3ccf602f4957');
     expect(args).to.have.property('Body', '{"name":"foo"}');
   });
 
@@ -92,7 +92,7 @@ describe('Save event to S3', () => {
     return {
       id: '473edc2b-a079-4fa9-8fb3-3ccf602f4957',
       detail: {
-        ts: "1603294852000",
+        ts: "1626311084000",
         data: includeData ? {name: 'foo'} : undefined
       }
     };
