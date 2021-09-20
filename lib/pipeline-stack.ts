@@ -22,7 +22,7 @@ export class PipelineStack extends Stack {
         actionName: 'Source',
         output: sourceArtifacts,
         owner: ssm.StringParameter.fromStringParameterName(this, 'GithubUsername', 'github_username').stringValue,
-        repo: 'eventbridge-infrastructure',
+        repo: 'amazon-eventbridge-cdk-audit-service-sample', // eventbridge-infrastructure
         oauthToken: SecretValue.secretsManager('github_token', { jsonField: 'github_token' }),
         branch: 'main'
       }),
