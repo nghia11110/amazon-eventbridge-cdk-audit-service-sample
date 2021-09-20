@@ -1,0 +1,3 @@
+[submodule "air-closet-config"]
+	path = air-closet-config
+	url = https://airClosetDev:34b7bf55057f4cd28d9df41cd3657cb87eb01c37@github.com/air-closet/air-closet-config.git

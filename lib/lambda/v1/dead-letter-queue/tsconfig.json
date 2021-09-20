@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target":"ES2018",
     "module": "commonjs",
     "lib": ["es2018"],
     "declaration": true,
@@ -16,15 +16,12 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
+    "strictPropertyInitialization":false,
     "typeRoots": ["./node_modules/@types"],
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "/opt/nodejs/request/aircloset": ["src/layers/axios-utils/nodejs/request/aircloset"],
-      "/opt/nodejs/slack": ["src/layers/slack-utils/nodejs/slack"],
-    }
+    "outDir": "./"
   },
-  "exclude": ["cdk.out", "lib/lambda"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

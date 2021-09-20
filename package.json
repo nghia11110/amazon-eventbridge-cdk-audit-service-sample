@@ -1,8 +1,8 @@
 {
-  "name": "amazon-eventbridge-cdk-audit-service-sample",
+  "name": "phoenix-infrastructure",
   "version": "1.0.0",
   "bin": {
-    "audit-service-sample": "bin/audit-service-sample.js"
+    "eventbirdge": "bin/eventbirdge.js"
   },
   "scripts": {
     "build": "./build.sh",
@@ -11,8 +11,7 @@
     "test": "jest",
     "cdk": "cdk"
   },
-  "author": "Amazon Web Services",
-  "license": "MIT",
+  "author": "Aircloset",
   "devDependencies": {
     "@aws-cdk/assert": "^1.103.0",
     "@types/jest": "^26.0.10",
@@ -30,6 +29,7 @@
     "@aws-cdk/aws-events": "^1.103.0",
     "@aws-cdk/aws-events-targets": "^1.103.0",
     "@aws-cdk/aws-lambda": "^1.103.0",
+    "@aws-cdk/aws-lambda-event-sources": "^1.103.0",
     "@aws-cdk/aws-logs": "^1.103.0",
     "@aws-cdk/aws-s3": "^1.103.0",
     "@aws-cdk/aws-sns": "^1.103.0",

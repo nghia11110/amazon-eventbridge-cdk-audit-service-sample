@@ -6,7 +6,7 @@
 set -euo pipefail
 
 echo "********************************************"
-echo "* Executing build for Audit Service sample *"
+echo "* Executing build for phoenix *"
 echo "********************************************"
 echo ;
 
@@ -21,8 +21,8 @@ echo -e "Done.\n"
 echo "Building AWS Lambda functions"
 cd lib/lambda/
 
-cd save-to-s3
-echo "- save-to-s3"
+cd call-ac-api
+echo "- call-ac-api"
 echo "  - Installing dependencies..."
 npm ci
 echo "  - Done."

@@ -1,0 +1,6 @@
+[{
+    "Source": "Arthur",
+    "DetailType": "Arthur Basic Info Changed",
+    "Detail": "{\"identifier\":\"1231231231\",\"token\":\"1231231231\",\"operation\":\"update\",\"data\": {\"top_size\":\"50\",\"pants_size\":\"60\"}}",
+    "EventBusName": "staging-arthur-event-bus"
+}]
