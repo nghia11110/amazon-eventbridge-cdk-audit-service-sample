@@ -10,17 +10,9 @@ echo "* Executing build for phoenix *"
 echo "********************************************"
 echo ;
 
-echo "Building main project..."
-tsc
-echo -e "Done.\n"
-
 echo "Add submodule..."
 git submodule sync --recursive
 git submodule update --recursive --init
-echo -e "Done.\n"
-
-echo "Executing unit tests..."
-npm test
 echo -e "Done.\n"
 
 echo "********************************************"
@@ -48,6 +40,14 @@ echo "  - Done."
 cd ../..
 
 cd ../..
+
+echo "Building main project..."
+tsc
+echo -e "Done.\n"
+
+echo "Executing unit tests..."
+npm test
+echo -e "Done.\n"
 
 echo "Building AWS Lambda functions"
 cd lib/lambda/
