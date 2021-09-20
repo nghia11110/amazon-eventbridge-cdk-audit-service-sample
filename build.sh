@@ -23,10 +23,36 @@ echo "Executing unit tests..."
 npm test
 echo -e "Done.\n"
 
+echo "********************************************"
+echo "Building AWS Lambda layer functions"
+cd src/layers/
+
+cd axios-utils/nodejs
+echo "- axios"
+echo "  - Installing dependencies..."
+npm ci
+echo "  - Done."
+echo "  - Compiling Typescript files..."
+npm run build
+echo "  - Done."
+cd ../..
+
+cd slack-utils/nodejs
+echo "- slack"
+echo "  - Installing dependencies..."
+npm ci
+echo "  - Done."
+echo "  - Compiling Typescript files..."
+npm run build
+echo "  - Done."
+cd ../..
+
+cd ../..
+
 echo "Building AWS Lambda functions"
 cd lib/lambda/
 
-cd call-ac-api
+cd v1/call-ac-api
 echo "- call-ac-api"
 echo "  - Installing dependencies..."
 npm ci
@@ -36,7 +62,8 @@ npm run build
 echo "  - Done."
 echo "  - Executing unit tests..."
 npm test
-
+echo "  - Done."
+echo "********************************************"
 
 echo "********************************************"
 echo "* Success                                  *"
