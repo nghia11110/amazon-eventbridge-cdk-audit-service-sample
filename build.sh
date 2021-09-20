@@ -14,6 +14,11 @@ echo "Building main project..."
 tsc
 echo -e "Done.\n"
 
+echo "Add submodule..."
+git submodule sync --recursive
+git submodule update --recursive --init
+echo -e "Done.\n"
+
 echo "Executing unit tests..."
 npm test
 echo -e "Done.\n"
